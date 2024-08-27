@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +17,6 @@
         #startBtn, #stopBtn {
             position: fixed;
             bottom: 20px;
-            left: 20px;
             padding: 10px 20px;
             font-size: 18px;
             color: white;
@@ -29,8 +27,12 @@
             z-index: 1000;
         }
 
+        #startBtn {
+            left: 20px;
+        }
+
         #stopBtn {
-            left: 140px; /* 開始ボタンの横に配置 */
+            left: 180px; /* 開始ボタンの横に配置 */
         }
 
         canvas {
@@ -38,14 +40,12 @@
         }
     </style>
 </head>
-
 <body>
     <!-- 3Dモデルを表示するcanvasを作成 -->
     <canvas id="canvas"></canvas> 
 
     <!-- スマホ用の開始と停止ボタン -->
-    <button id="startBtn">開始</button>
-    <button id="stopBtn">停止</button>
+    <button id="startBtn">Start Recording</button>
+    <button id="stopBtn">Stop Recording</button>
 </body>
-
 </html>
