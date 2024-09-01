@@ -137,7 +137,7 @@ recognition.onend = () => {
 };
 
 // 開始ボタンと停止ボタンのイベントリスナー
-document.getElementById('startBtn').addEventListener('click', () => {
+document.getElementById('startButton').addEventListener('click', () => {
     if (!isRecognizing) {
         recognition.start();
         console.log('音声認識を開始します...');
@@ -145,7 +145,7 @@ document.getElementById('startBtn').addEventListener('click', () => {
     }
 });
 
-document.getElementById('stopBtn').addEventListener('click', () => {
+document.getElementById('stopButton').addEventListener('click', () => {
     if (isRecognizing) {
         recognition.stop();
         console.log('音声認識を停止しました。');
