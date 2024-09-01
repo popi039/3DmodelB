@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show3DmodelPage</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #canvas {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            flex-grow: 1;
+        }
+
+        button {
+            width: 80%;
+            padding: 15px;
+            margin: 10px;
+            font-size: 1.2rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* スマホ向けのスタイル */
+        @media only screen and (max-width: 600px) {
+            button {
+                width: 90%;
+                font-size: 1.5rem;
+            }
+        }
+
+        /* ボタンを常に画面下部に表示 */
+        .fixed-button {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="mainB.js"></script>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+
+    <!-- ボタンの配置 -->
+    <button id="startButton" class="fixed-button">Start recording</button>
+    <button id="stopButton" class="fixed-button" style="bottom: 60px;">Stop recording</button>
+</body>
+
+</html>
